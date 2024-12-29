@@ -9,7 +9,6 @@ body {
 }
 
 .main-content {
-  width: 100vw;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
