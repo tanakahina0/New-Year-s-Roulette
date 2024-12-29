@@ -9,6 +9,42 @@ body {
   overflow-x: hidden;
 }
 
+#audio-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #99691f;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#audio-popup p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+#audio-popup button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #99691f;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#audio-popup button:hover {
+  background-color: #6b4a1e;
+}
+
 .main-content {
   max-width: 100%;
   box-sizing: border-box;
@@ -113,6 +149,10 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
+  #audio-popup {
+    width: 80vw;
+  }
+  
   .container {
     width: 90vw;
     margin: 0 auto;
