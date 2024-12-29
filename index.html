@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お年玉抽選会2025</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <h1>お年玉抽選会2025</h1>
+      <div class="roulette-content">
+        <canvas id="rouletteCanvas" class="roulette" width="500" height="500"></canvas>
+        <div class="line">◀ 当たり</div>
+        <div class="line-sp">◀</div>
+      </div>
+        <div class="controls">
+            <button id="startButton">スタート</button>
+            <audio id="start-audio" src="./bgm/Assorted_SE05-18.mp3"></audio>
+            <button id="stopButton" disabled>ストップ</button>
+            <audio id="stop-audio" src="./bgm/Assorted_SE05-14.mp3"></audio>
+        </div>
+        <div id="result" class="result">今年のお年玉は...</div>
+    </div>
+  </div>
+  <footer>
+    <p>画像提供:<a href="https://www.ac-illust.com/#google_vignette" target="_blank">イラストAC</a></p>
+    <p>BGM提供:<a href="https://www.hurtrecord.com/" target="_blank">HURT RECORD</a></p>
+    <p>効果音提供:<a href="https://otologic.jp/" target="_blank">OtoLogic</a></p>
+  </footer>
+  <audio id="bgm" autoplay loop src="./bgm/kadomatsu.mp3"></audio>
+  <script src="./js/script.js"></script>
+</body>
+</html>

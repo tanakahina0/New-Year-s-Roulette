@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #991621;
+}
+
+.main-content {
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  border-top: 10px solid #991621;
+  border-bottom: 10px solid #991621;
+  border-left: 10px solid #fffbe8;
+  border-right: 10px solid #fffbe8;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #99691f;
+  background-color: #e0ddcf;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.roulette-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  display: block;
+  margin-top: -20px;
+  margin-left: 20px;
+  color: #99691f;
+}
+
+.line-sp {
+  display: none;
+}
+
+canvas {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #99691f;
+  background-color: #e6dba9;
+  border: none;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.controls button:hover {
+  color: #654515;
+  background-color: #9d9675;
+}
+
+.result {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #540B0E;
+  background-color: #e0ddcf;
+  border-radius: 10px;
+}
+
+footer {
+  width: 98vw;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 30px 20px;
+  color: #e0ddcf;
+}
+
+footer p {
+  margin-right: 1rem;
+}
+
+footer p:last-child {
+  margin-right: 0;
+}
+
+footer a {
+  color: #e0ddcf;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0 auto;
+    font-size: 16px;
+  }
+
+  .main-content {
+    padding: 10px 0;
+  }
+
+  canvas {
+    width: 100%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .line-sp {
+    display: block;
+    margin-top: -20px;
+    margin-left: 10px;
+    color: #99691f;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .controls button:hover {
+    color: #99691f;
+    background-color: #e6dba9;
+  }
+
+  .result {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #540B0E;
+    background-color: #e0ddcf;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  footer {
+    width: 100vw;
+    text-align: center;
+    display: block;
+    padding: 0 0 10px 0;
+    margin: 0;
+    color: #e0ddcf;
+  }
+
+  footer p {
+    margin-right: 0;
+  }
+}
