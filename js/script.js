@@ -118,10 +118,7 @@ stopButton.addEventListener("click", () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded',() => {
-  const audio = document.getElementById('bgm');
-  audio.volume = 0.3;
-});
+bgm.volume = 0.3;
 
 document.getElementById('startButton').addEventListener('click', function() {
   const audio = document.getElementById('start-audio');
