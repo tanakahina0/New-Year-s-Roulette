@@ -5,7 +5,7 @@ const startButton = document.getElementById("startButton");
 const stopButton = document.getElementById("stopButton");
 const colors = ["#9E2A2B", "#335C67", "#E09F3E", "#E1CE7A", "#540B0E"];
 const sections = ["10万円", "1万円", "5000円", "1000円", "100円"];
-const sectionSizes = [0.1, 1, 1, 1, 1];
+const sectionSizes = [0.1, 1, 0.8, 0.7, 0.5];
 const totalSize = sectionSizes.reduce((a, b) => a + b, 0);
 const angles = sectionSizes.map(size => (2 * Math.PI * size) / totalSize);
 
