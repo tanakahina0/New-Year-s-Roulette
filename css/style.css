@@ -7,11 +7,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #991621;
   width: 100vw;
-  height: auto;
-  overflow: hidden;
 }
 
 .main-content {
+  width: 100vw;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
