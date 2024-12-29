@@ -5,7 +5,7 @@ const startButton = document.getElementById("startButton");
 const stopButton = document.getElementById("stopButton");
 const colors = ["#9E2A2B", "#335C67", "#E09F3E", "#E1CE7A", "#540B0E"];
 const sections = ["10万円", "1万円", "5000円", "1000円", "100円"];
-const sectionSizes = [0.1, 1, 0.8, 0.7, 0.5];
+const sectionSizes = [0.1, 1, 0.8, 0.7, 0.3];
 const totalSize = sectionSizes.reduce((a, b) => a + b, 0);
 const angles = sectionSizes.map(size => (2 * Math.PI * size) / totalSize);
 
@@ -118,8 +118,6 @@ stopButton.addEventListener("click", () => {
     }
 });
 
-bgm.volume = 0.3;
-
 document.getElementById('startButton').addEventListener('click', function() {
   const audio = document.getElementById('start-audio');
   audio.play();
@@ -128,6 +126,43 @@ document.getElementById('startButton').addEventListener('click', function() {
 document.getElementById('stopButton').addEventListener('click', function() {
   const audio = document.getElementById('stop-audio');
   audio.play();
+});
+
+function createPopup() {
+    const popup = document.createElement("div");
+    popup.id = "audio-popup";
+    popup.innerHTML = `
+        <p>このサイトは音声が流れます。有効にしますか？</p>
+        <button id="audio-yes">はい</button>
+        <button id="audio-no">いいえ</button>
+    `;
+    document.body.appendChild(popup);
+
+    document.getElementById("audio-yes").addEventListener("click", () => handleAudioChoice(true));
+    document.getElementById("audio-no").addEventListener("click", () => handleAudioChoice(false));
+}
+
+// 音声選択処理
+function handleAudioChoice(enableAudio) {
+    const popup = document.getElementById("audio-popup");
+    popup.remove();
+
+    const bgm = document.getElementById("bgm");
+    const startAudio = document.getElementById("start-audio");
+    const stopAudio = document.getElementById("stop-audio");
+
+    if (!enableAudio) {
+        bgm.muted = true;
+        startAudio.muted = true;
+        stopAudio.muted = true;
+    } else {
+        bgm.play(); // 自動再生を明示的に開始
+    }
+}
+
+// ページ読み込み時にポップアップを表示
+window.addEventListener("DOMContentLoaded", () => {
+    createPopup();
 });
 
 drawRoulette();
